@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
         if (userInput.startsWith('-')) {
           userInput = userInput.substring(1); // Remove the negative sign
         } else {
-          userInput = '-' + userInput; // Add the negative sign
+          userInput = '-$userInput'; // Add the negative sign
         }
       }
     });
@@ -114,24 +114,22 @@ class _HomePageState extends State<HomePage> {
         children: [
           // user input and ans
           Expanded(
-            child: Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  MyText(
-                    text: userInput,
-                    fontSize: 35,
-                    alignment: Alignment.centerLeft,
-                    color: Colors.white,
-                  ),
-                  MyText(
-                    text: showAnswer,
-                    fontSize: 45,
-                    alignment: Alignment.centerRight,
-                    color: Colors.grey[400],
-                  ),
-                ],
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                MyText(
+                  text: userInput,
+                  fontSize: 35,
+                  alignment: Alignment.centerLeft,
+                  color: Colors.white,
+                ),
+                MyText(
+                  text: showAnswer,
+                  fontSize: 45,
+                  alignment: Alignment.centerRight,
+                  color: Colors.grey[400],
+                ),
+              ],
             ),
           ),
 

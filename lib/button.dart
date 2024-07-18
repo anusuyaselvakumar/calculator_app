@@ -19,10 +19,11 @@ class MyButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(45),
+        borderRadius: BorderRadius.circular(15),
         child: GestureDetector(
           onTap: onTap,
           child: Container(
+            padding: EdgeInsets.zero,
             color: color,
             child: Center(
               child: Text(
